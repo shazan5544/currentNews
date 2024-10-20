@@ -15,13 +15,13 @@ sealed class Page (
     )
 
     data object SecondPage : Page(
-        image = R.drawable.world_map_svgrepo_com_1,
+        image = R.drawable.map_onboarding,
         title = "Personalize Your News by Location",
         description = "Select your preferred location to get tailored news updates"
     )
 
     data object ThirdPage : Page(
-        image = R.drawable.world_map_svgrepo_com_1,
+        image = R.drawable.map_onboarding,
         title = "Personalize Your News by Location",
         description = "Select your preferred location to get tailored news updates"
     )

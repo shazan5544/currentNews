@@ -46,19 +46,20 @@ fun OnBoardingPage(
         )
         Spacer(modifier = Modifier.size(50.dp))
         Text(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier.fillMaxWidth(0.90f).align(Alignment.CenterHorizontally),
+
             fontSize = 20.sp,
             textAlign = TextAlign.Center,
             text = page.title,
-            style = MaterialTheme.typography.titleMedium,
+            style = MaterialTheme.typography.labelLarge,
             color = MaterialTheme.colorScheme.onBackground
         )
         Spacer(modifier = Modifier
             .fillMaxWidth()
             .size(15.dp))
         Text(
-            modifier = Modifier.fillMaxWidth(),
-            fontSize = 20.sp,
+            modifier = Modifier.fillMaxWidth(0.90f).align(Alignment.CenterHorizontally),
+            fontSize = 15.sp,
             textAlign = TextAlign.Center,
             text = page.description,
             style = MaterialTheme.typography.bodySmall,
