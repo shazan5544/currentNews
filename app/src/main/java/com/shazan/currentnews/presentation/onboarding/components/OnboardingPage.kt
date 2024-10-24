@@ -52,7 +52,7 @@ fun OnBoardingPage(
             textAlign = TextAlign.Center,
             text = page.title,
             style = MaterialTheme.typography.labelLarge,
-            color = MaterialTheme.colorScheme.onBackground
+            color = MaterialTheme.colorScheme.primary
         )
         Spacer(modifier = Modifier
             .fillMaxWidth()
@@ -63,7 +63,7 @@ fun OnBoardingPage(
             textAlign = TextAlign.Center,
             text = page.description,
             style = MaterialTheme.typography.bodySmall,
-            color = MaterialTheme.colorScheme.onSurface,
+            color = MaterialTheme.colorScheme.secondary,
             lineHeight = 25.sp
         )
         Spacer(modifier = Modifier

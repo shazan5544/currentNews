@@ -29,8 +29,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             CurrentNewsTheme {
 
-                ShowOnboardingScreen()
-
+                OnboardingScreen {  }
 //                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 //                    Greeting(
 //                        name = "Android",
@@ -42,29 +41,19 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun ShowOnboardingScreen() {
-    val context = LocalContext.current
-    Box(modifier = Modifier.background(color = MaterialTheme.colorScheme.background)) {
-        OnboardingScreen {
-            Toast.makeText(context, "Onboarding Completed", Toast.LENGTH_SHORT).show()
-        }
-    }
-
-}
-
 //@Composable
-//fun Greeting(name: String, modifier: Modifier = Modifier) {
-//    Text(
-//        text = "Hello $name!",
-//        modifier = modifier
-//    )
-//}
-//
-//@Preview(showBackground = true)
-//@Composable
-//fun GreetingPreview() {
-//    MyApplicationTheme {
-//        Greeting("Android")
+//fun ShowOnboardingScreen() {
+//    val context = LocalContext.current
+//    Box(modifier = Modifier.background(color = MaterialTheme.colorScheme.background)) {
+//        OnboardingScreen {
+//            Toast.makeText(context, "Onboarding Completed", Toast.LENGTH_SHORT).show()
+//        }
 //    }
+//
 //}
+
+@Preview()
+@Composable
+private fun Preview1() {
+    OnboardingScreen {  }
+}

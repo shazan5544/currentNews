@@ -1,6 +1,9 @@
 package com.shazan.currentnews.presentation.onboarding
 
+import android.content.res.Configuration
+import android.content.res.Configuration.UI_MODE_NIGHT_YES
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -69,6 +72,7 @@ fun OnboardingScreen(onFinished: () -> Unit) {
                     if (buttonState.value[0].isNotEmpty()) {
                         ButtonUI(
                             text = buttonState.value[0],
+                            fontSize = 14,
                             backgroundColor = Color.Transparent,
                             textColor = Color.Gray
                         ) {
@@ -94,6 +98,7 @@ fun OnboardingScreen(onFinished: () -> Unit) {
                 ) {
                     ButtonUI(
                         text = buttonState.value[1],
+                        fontSize = 14,
                         backgroundColor = MaterialTheme.colorScheme.primary,
                         textColor = MaterialTheme.colorScheme.onPrimary
                     ) {
@@ -110,15 +115,15 @@ fun OnboardingScreen(onFinished: () -> Unit) {
         }, content = {
             Column (Modifier.padding(it)){
                 HorizontalPager(state = pagerState) {  index ->
-                    OnBoardingPage(page = pages[index])
+                    OnBoardingPage(page = pages[index], modifier = Modifier.background(MaterialTheme.colorScheme.background))
                 }
             }
         })
 }
 
-@Preview(showBackground = true)
+@Preview()
 @Composable
-private fun OnboardingScreenPreview() {
+private fun OnboardingScreenPreview1() {
     OnboardingScreen {
 
     }

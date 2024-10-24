@@ -16,7 +16,7 @@ fun ButtonUI(
     backgroundColor: Color = MaterialTheme.colorScheme.primary,
     textColor: Color = MaterialTheme.colorScheme.onPrimary,
     textStyle: androidx.compose.ui.text.TextStyle = MaterialTheme.typography.titleMedium,
-    fontSize: Int = 14,
+    fontSize: Int,
     onClick: () -> Unit
 ) {
     Button(onClick = onClick,
@@ -35,7 +35,7 @@ fun ButtonUI(
 @Preview
 @Composable
 private fun NextButton() {
-    ButtonUI (text = "Next"){
+    ButtonUI (text = "Next", fontSize = 14){
 
     }
 }

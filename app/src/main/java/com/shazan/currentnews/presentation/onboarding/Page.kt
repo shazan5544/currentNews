@@ -9,7 +9,7 @@ sealed class Page (
     val description: String,
 ){
     data object FirstPage : Page(
-        image = R.drawable.currentnewslogo2,
+        image = R.drawable.cn_logo,
         title = "Welcome to currentNews",
         description = "Stay Updated with the Latest News in Real-Time"
     )
@@ -17,12 +17,12 @@ sealed class Page (
     data object SecondPage : Page(
         image = R.drawable.map_onboarding,
         title = "Personalize Your News by Location",
-        description = "Select your preferred location to get tailored news updates"
+        description = "Select your preferred location to get tailored news"
     )
 
     data object ThirdPage : Page(
         image = R.drawable.map_onboarding,
         title = "Personalize Your News by Location",
-        description = "Select your preferred location to get tailored news updates"
+        description = "Select your preferred location to get tailored news"
     )
 }

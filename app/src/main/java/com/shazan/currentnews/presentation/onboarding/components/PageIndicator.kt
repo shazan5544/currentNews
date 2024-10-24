@@ -23,8 +23,8 @@ fun PagerIndicator(
     modifier: Modifier = Modifier,
     pagesSize: Int,
     selectedPage: Int,
-    selectedColor: Color = MaterialTheme.colorScheme.secondary,
-    unselectedColor: Color = MaterialTheme.colorScheme.secondaryContainer
+    selectedColor: Color = MaterialTheme.colorScheme.primary,
+    unselectedColor: Color = MaterialTheme.colorScheme.secondary
 ) {
 
 
