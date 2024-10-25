@@ -13,6 +13,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.ui.graphics.Color
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.tooling.preview.Preview
@@ -28,14 +29,17 @@ fun PagerIndicator(
 ) {
 
 
-    Row (horizontalArrangement = Arrangement.SpaceBetween){
+    Row (horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically){
         repeat(pagesSize){
             Spacer(modifier = Modifier.size(2.5.dp))
             Box(
                 modifier = Modifier
-                    .height(16.dp)
-                    .width(width = if (it == selectedPage) 28.dp else 16.dp)
-                    .clip(RoundedCornerShape(10.dp))
+                    .size(size = if (it == selectedPage) 16.dp else 12.dp)
+//                    .height(16.dp)
+//                    .height(height = if (it == selectedPage) 28.dp else 16.dp)
+//                    .width(width = if (it == selectedPage) 28.dp else 16.dp)
+                    .clip(RoundedCornerShape(25.dp))
                     .background(color = if (it == selectedPage) selectedColor else unselectedColor)
             )
         }

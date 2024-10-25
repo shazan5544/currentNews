@@ -24,6 +24,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.shazan.currentnews.presentation.onboarding.OnboardingScreen
 import com.shazan.currentnews.presentation.onboarding.Page
 import com.shazan.currentnews.ui.theme.CurrentNewsTheme
 
@@ -40,13 +41,15 @@ fun OnBoardingPage(
                 .fillMaxWidth()
                 .padding(50.dp, 0.dp),
             painter = painterResource(id = page.image),
-            contentScale = ContentScale.Crop,
+            contentScale = ContentScale.Fit,
             contentDescription = null,
             alignment = Alignment.Center
         )
         Spacer(modifier = Modifier.size(50.dp))
         Text(
-            modifier = Modifier.fillMaxWidth(0.90f).align(Alignment.CenterHorizontally),
+            modifier = Modifier
+                .fillMaxWidth()
+                .align(Alignment.CenterHorizontally),
 
             fontSize = 20.sp,
             textAlign = TextAlign.Center,
@@ -58,7 +61,9 @@ fun OnBoardingPage(
             .fillMaxWidth()
             .size(15.dp))
         Text(
-            modifier = Modifier.fillMaxWidth(0.90f).align(Alignment.CenterHorizontally),
+            modifier = Modifier
+                .fillMaxWidth(0.9f)
+                .align(Alignment.CenterHorizontally),
             fontSize = 15.sp,
             textAlign = TextAlign.Center,
             text = page.description,
@@ -79,11 +84,15 @@ fun OnBoardingPage(
 
 @Preview(showBackground = true)
 @Composable
-fun OnboardingPreview1() {
+private fun OnboardingPrev1() {
     CurrentNewsTheme {
-        OnBoardingPage(
-            modifier = Modifier.fillMaxWidth(),
-            page = Page.FirstPage
-        )
+        OnBoardingPage(page = Page.FirstPage)
+    }
+}
+@Preview(showBackground = true)
+@Composable
+private fun OnboardingPrev2() {
+    CurrentNewsTheme {
+        OnBoardingPage(page = Page.SecondPage)
     }
 }

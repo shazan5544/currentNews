@@ -30,6 +30,7 @@ import androidx.compose.ui.unit.dp
 import com.shazan.currentnews.presentation.common.ButtonUI
 import com.shazan.currentnews.presentation.onboarding.components.OnBoardingPage
 import com.shazan.currentnews.presentation.onboarding.components.PagerIndicator
+import com.shazan.currentnews.ui.theme.CurrentNewsTheme
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalFoundationApi::class)
@@ -61,7 +62,7 @@ fun OnboardingScreen(onFinished: () -> Unit) {
             Row(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(25.dp, 25.dp),
+                    .padding(20.dp, 20.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -124,8 +125,9 @@ fun OnboardingScreen(onFinished: () -> Unit) {
 @Preview()
 @Composable
 private fun OnboardingScreenPreview1() {
-    OnboardingScreen {
-
+    CurrentNewsTheme {
+        OnboardingScreen {  }
     }
 
 }
+
