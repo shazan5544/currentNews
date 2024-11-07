@@ -42,12 +42,11 @@ android {
 
 dependencies {
 
-    val nav_version = "2.8.1"
-    implementation("androidx.navigation:navigation-compose:$nav_version")
+    implementation(libs.androidx.navigation.compose)
 
-    implementation("io.coil-kt:coil-compose:2.7.0")
-    implementation("com.github.KwabenBerko:News-API-Java:1.0.2")
-    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+    implementation(libs.coil.kt.coil.compose)
+    implementation(libs.news.api.java)
+    implementation(libs.kotlinx.serialization.json)
 
     implementation(libs.androidx.core.splashscreen)
 
