@@ -27,6 +27,8 @@ import coil.compose.AsyncImage
 import com.kwabenaberko.newsapilib.models.Article
 import com.shazan.currentnews.NewsArticleScreen
 import com.shazan.currentnews.R
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
 
 @Composable
 fun ArticleCard(article: Article, navController: NavController) {
@@ -81,10 +83,13 @@ fun ArticleCard(article: Article, navController: NavController) {
                         tint = MaterialTheme.colorScheme.primary
                     )
                     Spacer(modifier = Modifier.padding(3.dp))
+                    val parsedDate = LocalDateTime.parse(article.publishedAt, DateTimeFormatter.ISO_DATE_TIME)
+                    val formattedDate = parsedDate.format(DateTimeFormatter.ofPattern("dd-MM-yyyy"))
                     Text(
-                        text = article.publishedAt,
+                        text = formattedDate,
                         style = MaterialTheme.typography.labelSmall,
-                        color = MaterialTheme.colorScheme.primary
+                        color = MaterialTheme.colorScheme.primary,
+                        maxLines = 1
                     )
                 }
             }
@@ -93,4 +98,3 @@ fun ArticleCard(article: Article, navController: NavController) {
         }
     }
 }
-
