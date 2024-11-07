@@ -77,7 +77,7 @@ fun ArticleCard(article: Article, navController: NavController) {
                     )
                     Spacer(modifier = Modifier.padding(6.dp))
                     Icon(
-                        painter = painterResource(R.drawable.ic_time),
+                        painter = painterResource(R.drawable.ic_date),
                         contentDescription = null,
                         modifier = Modifier.size(11.dp),
                         tint = MaterialTheme.colorScheme.primary
