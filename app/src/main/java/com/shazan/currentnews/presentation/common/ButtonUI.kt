@@ -7,19 +7,19 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
 fun ButtonUI(
-    text: String ,
+    text: String,
     backgroundColor: Color = MaterialTheme.colorScheme.primary,
-    textColor: Color = MaterialTheme.colorScheme.onPrimary,
+    textColor: Color = MaterialTheme.colorScheme.background,
     textStyle: androidx.compose.ui.text.TextStyle = MaterialTheme.typography.titleMedium,
     fontSize: Int,
     onClick: () -> Unit
 ) {
-    Button(onClick = onClick,
+    Button(
+        onClick = onClick,
         colors = ButtonDefaults.buttonColors(
             containerColor = backgroundColor,
             contentColor = textColor
@@ -32,25 +32,26 @@ fun ButtonUI(
     }
 }
 
-@Preview
-@Composable
-private fun NextButton() {
-    ButtonUI (text = "Next", fontSize = 14){
-
-    }
-}
-
-@Preview(showBackground = true )
-@Composable
-private fun BackButton() {
-    ButtonUI (text = "Back",
-        backgroundColor = Color.Transparent,
-        textColor = Color.Gray,
-        textStyle = MaterialTheme.typography.bodySmall,
-        fontSize = 13
-    ){
-
-    }
-
-}
-
+//@Preview
+//@Composable
+//private fun NextButton() {
+//    ButtonUI(text = "Next", fontSize = 14, textColor = MaterialTheme.colorScheme.background) {
+//
+//    }
+//}
+//
+//@Preview(showBackground = true)
+//@Composable
+//private fun BackButton() {
+//    ButtonUI(
+//        text = "Back",
+//        backgroundColor = Color.Transparent,
+//        textColor = Color.Gray,
+//        textStyle = MaterialTheme.typography.bodySmall,
+//        fontSize = 13
+//    ) {
+//
+//    }
+//
+//}
+//

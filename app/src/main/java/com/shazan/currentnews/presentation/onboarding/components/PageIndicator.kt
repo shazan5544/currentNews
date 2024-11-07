@@ -7,12 +7,12 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.ui.graphics.Color
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
@@ -22,13 +22,15 @@ fun PagerIndicator(
     pagesSize: Int,
     selectedPage: Int,
     selectedColor: Color = MaterialTheme.colorScheme.primary,
-    unselectedColor: Color = MaterialTheme.colorScheme.secondary
+    unselectedColor: Color = MaterialTheme.colorScheme.onPrimary
 ) {
 
 
-    Row (horizontalArrangement = Arrangement.SpaceBetween,
-        verticalAlignment = Alignment.CenterVertically){
-        repeat(pagesSize){
+    Row(
+        horizontalArrangement = Arrangement.SpaceBetween,
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        repeat(pagesSize) {
             Spacer(modifier = Modifier.size(2.5.dp))
             Box(
                 modifier = Modifier
@@ -50,11 +52,13 @@ fun PagerIndicator(
 private fun IndicatorPreview() {
     PagerIndicator(pagesSize = 3, selectedPage = 0)
 }
+
 @Preview(showBackground = true)
 @Composable
 private fun IndicatorPreview1() {
     PagerIndicator(pagesSize = 3, selectedPage = 1)
 }
+
 @Preview(showBackground = true)
 @Composable
 private fun IndicatorPreview2() {

@@ -1,49 +1,56 @@
 package com.shazan.currentnews
 
+import android.annotation.SuppressLint
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import androidx.navigation.toRoute
+import com.shazan.currentnews.model.NewsViewModel
+import com.shazan.currentnews.presentation.article.NewsArticlePage
+import com.shazan.currentnews.presentation.homescreen.HomeScreen
 import com.shazan.currentnews.presentation.onboarding.OnboardingScreen
 import com.shazan.currentnews.ui.theme.CurrentNewsTheme
 
 class MainActivity : ComponentActivity() {
+    @SuppressLint("NewApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         installSplashScreen()
+        val newsViewModel = ViewModelProvider(this)[NewsViewModel::class.java]
         enableEdgeToEdge()
         setContent {
             CurrentNewsTheme {
-
-                OnboardingScreen {  }
-//                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-//                    Greeting(
-//                        name = "Android",
-//                        modifier = Modifier.padding(innerPadding)
-//                    )
-//                    }
+                val navController = rememberNavController()
+                NavHost(
+                    navController = navController,
+                    startDestination = OnboardingPageScreen,
+                    builder = {
+                        composable<OnboardingPageScreen> {
+                            OnboardingScreen(navController)
+                        }
+                        composable<HomePageScreen> {
+                            HomeScreen(newsViewModel, navController)
+                        }
+                        composable<NewsArticleScreen> {
+                            val args = it.toRoute<NewsArticleScreen>()
+                            NewsArticlePage(args.url)
+                        }
+                    })
             }
         }
     }
 }
 
-//@Composable
-//fun ShowOnboardingScreen() {
-//    val context = LocalContext.current
-//    Box(modifier = Modifier.background(color = MaterialTheme.colorScheme.background)) {
-//        OnboardingScreen {
-//            Toast.makeText(context, "Onboarding Completed", Toast.LENGTH_SHORT).show()
-//        }
-//    }
-//
-//}
 
-@Preview()
+@Preview(showBackground = true)
 @Composable
 private fun Preview1() {
-    OnboardingScreen {  }
 }
