@@ -22,7 +22,7 @@ sealed class Page(
 
     data object ThirdPage : Page(
         image = R.drawable.articles_panapng,
-        title = "  Read Latest Tech News Articles  ",
+        title = "  Read Latest Tech Articles  ",
         description = "  Covers Tech Industry News, Startups, Product Launches, and Innovations  "
     )
 }
