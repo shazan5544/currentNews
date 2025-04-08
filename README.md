@@ -1,16 +1,8 @@
 # CurrentNews
 
 ## Screenshot
+![Screenshot_1](https://github.com/user-attachments/assets/2cea5b19-9f41-4ee3-9b62-851626aacc74)
 
-<img title="" src="file:///C:/Users/shaza/documents/btech/7thSem/MinorProject/screenshot/Screenshot_20241111_235534_currentNews.jpg" alt="Screenshot_20241111_235534_currentNews.jpg" width="148">
-
-<img src="file:///C:/Users/shaza/documents/btech/7thSem/MinorProject/screenshot/Screenshot_20241111_235539_currentNews.jpg" title="" alt="Screenshot_20241111_235539_currentNews.jpg" width="148">
-
-<img src="file:///C:/Users/shaza/documents/btech/7thSem/MinorProject/screenshot/Screenshot_20241111_235543_currentNews.jpg" title="" alt="Screenshot_20241111_235543_currentNews.jpg" width="148">
-
-<img src="file:///C:/Users/shaza/documents/btech/7thSem/MinorProject/screenshot/Home_1.jpg" title="" alt="Home_1.jpg" width="148">
-
-<img src="file:///C:/Users/shaza/documents/btech/7thSem/MinorProject/screenshot/Article_page.jpg" title="" alt="Article_page.jpg" width="149">
 
 ## Logo Design
 
