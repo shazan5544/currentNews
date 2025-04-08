@@ -1,4 +1,7 @@
 # CurrentNews
+**CurrentNews is an Android application designed to deliver real-time, technology-focused news through a clean, intuitive user interface.
+Developed using Kotlin and Jetpack Compose, the app leverages Clean Architecture patterns to achieve maintainability, and efficiency.
+The application integrates with NewsAPI to fetch the latest technology articles, displayed in a minimalist card-based layout**
 
 ## Screenshot
 ![Screenshot_20241111_235534_currentNews](https://github.com/user-attachments/assets/608019ae-363b-4ee2-a06f-e57a071f8554)
